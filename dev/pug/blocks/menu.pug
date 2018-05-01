@@ -1,0 +1,12 @@
+#toggle.icon-bars
+nav#menu-container
+  ul.main-menu
+    each page in pages
+      //- Operador ternario que añade la clase active si el item de menu coincide con la pagina
+      -page == currentPage ? active = 'active' : active = ''
+      if page == 'inicio'
+        li(class="main-menu__item "+active id=page): a(href='index.html' class="main-menu__item-link") #{page}
+      else if page == 'acerca de mi'
+        li(class="main-menu__item "+active id=page): a(href='acerca.html' class="main-menu__item-link") #{page}
+      else
+        li(class="main-menu__item "+active id=page): a(href=page + '.html' class="main-menu__item-link") #{page}

@@ -1,0 +1,19 @@
+extends templates/template.pug
+
+append config
+  -pageTitle = 'Videos'
+  -currentPage = 'videos'
+
+block main
+  .video-container
+    .video-content
+      iframe(src="https://player.vimeo.com/video/258760149" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+    .video-content
+      iframe(src="https://player.vimeo.com/video/252647003" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+    .video-content
+      iframe(src="https://player.vimeo.com/video/253057308" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+    .video-content
+      iframe(src="https://player.vimeo.com/video/244354974" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+
+block assets
+  include blocks/scripts

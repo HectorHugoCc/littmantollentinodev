@@ -1,0 +1,86 @@
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-size: 2em;
+  color: #fff;
+}
+
+nav {
+  background: rgba(0, 0, 0, .8);
+  left: -20em;
+  height: 95%;
+  padding-left: .25em;
+  padding-top: 2em;
+  position: fixed;
+  transition: all .3s;
+  z-index: 100;
+  
+  @media screen and (min-width:768px) {
+    background: rgba(255, 255, 255, .0);
+    left: 5%;
+    height: 2.5em;
+    width: 90%;;
+    padding-top: 0;
+  }
+}
+
+.mostrar {
+  left: 0;
+}
+
+#toggle {
+  cursor: pointer;
+  position: fixed;
+  top: 1.5em;
+  left: 6.7%;
+  z-index: 200;
+
+  @media screen and (min-width:768px) {
+    display: none;
+  }
+}
+.main-menu {
+  /* outline: 1px solid red; */
+  line-height: 42px;
+  width: 15em;
+  height: 100%;
+  text-align: start;
+  
+  @media screen and (min-width:768px) {
+    padding: 0 5em;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  &__item {
+    /* outline: 1px solid green; */
+    border-left: 3px solid rgba(255, 255, 255, .2);
+    padding-left: 0.5em;
+    margin-bottom: 5px;
+    box-shadow: 3px 0 rgba(255, 255, 255, .2) inset;
+    transition: all .5s;
+    
+    &-link {
+      color: #ddd;
+      text-transform: uppercase;
+      display: block;
+      width: 100%;
+      transition: all .5s;    
+    }
+
+    @media screen and (min-width:768px) {
+      width: 10em;
+      &:hover {
+        box-shadow: 15em 0 rgba(255, 255, 255, .2) inset;
+      }
+
+      &-link:hover {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+
+.active {
+  box-shadow: 15em 0 rgba(255, 255, 255, .2) inset;
+}

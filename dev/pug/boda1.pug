@@ -1,0 +1,16 @@
+extends templates/template
+
+append config
+  -pageTitle = 'Antonio + Amy'
+  -currentPage = 'prebodas'
+
+block main
+  .title
+    h1: a(href="./bodas.html" name="1")#titleBoda VOLVER
+    .gallery#galeria-bodas
+
+block footer
+  include blocks/footer
+
+block assets
+  include blocks/scripts

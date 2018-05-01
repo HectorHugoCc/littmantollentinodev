@@ -1,0 +1,16 @@
+extends templates/template
+
+append config
+  -pageTitle = 'PreBodas'
+  -currentPage = 'prebodas'
+
+block main
+  .title
+    h1: a(href="portafolio.html") VOLVER
+  .gallery#galeria-prebodas
+
+block footer
+  include blocks/footer
+
+block assets
+  include blocks/scripts

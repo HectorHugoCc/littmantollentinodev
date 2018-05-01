@@ -1,0 +1,15 @@
+extends templates/template.pug
+
+append config
+  -pageTitle = 'Recientes'
+  -currentPage = 'recientes'
+
+block main
+  include blocks/banner
+
+block footer
+  include blocks/logo
+  include blocks/footer
+
+block assets
+  include blocks/scripts

@@ -1,0 +1,32 @@
+footer {
+	text-align: center;
+}
+
+.footer {
+  background : #434343;
+	color: #DEDEDE;
+  padding : 2em 0;
+  a {
+		color: #DEDEDE;
+	}
+	
+}
+
+.footer-index {
+	/* outline: 1px solid red; */
+	color: #DEDEDE;
+}
+
+.social-networks {
+  a {
+    text-decoration : none;
+    margin-right : .5em;
+    font-size : .7em;
+  }
+}
+
+.right,
+.social-networks {
+	display: flex;
+	align-items: center;
+}

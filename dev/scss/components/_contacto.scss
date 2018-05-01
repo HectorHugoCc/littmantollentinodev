@@ -1,0 +1,38 @@
+.form,
+[class*="form--"]{
+  input, textarea {
+    width : 100%;
+    display : block;
+  }
+
+  input {
+    line-height : 3;
+    padding-left : 1em;
+  }
+
+  textarea {
+    padding : 1em;
+  }
+}
+
+.form__item {
+  margin-bottom : 2em;
+}
+
+.form__submit {
+  background: #D4671F;
+  color: #fff;
+  line-height : 3;
+  border : 1px solid #434343;
+  font-family : 'Zilla Slab', serif;
+}
+
+.form--contact {
+  max-width : 90%;
+  margin-top: 1em;
+  margin-left : auto;
+  margin-right : auto;
+  @media screen and (min-width: 768px) {
+    width : 60%;
+  }
+}

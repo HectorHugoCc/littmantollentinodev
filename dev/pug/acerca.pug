@@ -1,0 +1,16 @@
+extends templates/template.pug
+
+append config
+  -pageTitle = 'Acerca de'
+  -currentPage = 'acerca de mi'
+
+block main
+  include blocks/about
+  include blocks/contacto
+
+block footer
+  include blocks/logo
+  include blocks/footer
+
+block assets
+  include blocks/scripts

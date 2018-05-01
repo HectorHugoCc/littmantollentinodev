@@ -1,0 +1,27 @@
+$bp-ms:320px; /* mobiel small */
+$bp-mm:375px; /* mobile medium */
+$bp-ml:425px; /* mobile large */
+$bp-t:728px; /* tablet */
+$bp-l:1024px; /* laptop */
+$bp-ll:1440px; /* laptop L*/
+$bp-4k:2560px; /* 4k*/
+
+@import 'components/base';
+@import 'components/core';
+@import 'components/fontastic';
+@import 'components/menu';
+@import 'components/main';
+@import 'components/banner';
+@import 'components/portafolio';
+@import 'components/video';
+@import 'components/footer';
+@import 'components/logo';
+@import 'components/acerca';
+@import 'components/contacto';
+
+header {
+  /* outline: 2px dashed green; */
+  height: 2.5em;
+  width: 100%;
+}
+

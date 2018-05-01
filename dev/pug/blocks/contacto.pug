@@ -1,0 +1,9 @@
+.contact.l-container.l-section
+  .contact
+    h2.contact__title.section__title Contacto
+    p.contact__description.section__description
+    form(class="form--contact" action="contacto.php" method="post")
+      input(name="nombre" id="name" placeholder="Nombres").form__item
+      input(type="email" name="email" id="email" placeholder="Correo electrónico").form__item
+      textarea(name="comentario" id="message" placeholder="Escribe tu mensaje" rows="8").form__item
+      input(type="submit" value="Enviar mensaje").form__item.form__submit

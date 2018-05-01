@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* background:radial-gradient(#FFF, #000) fixed; */
+  background:url("/imgs/textu.jpg") fixed;
+  font-family: 'Raleway', sans-serif;
+}
+
+// Imágenes responsive
+img {
+  max-width : 100%;
+  height    : auto;
+}
+
+a {
+  text-decoration : none;
+}
+
+li {
+  list-style: none;
+}

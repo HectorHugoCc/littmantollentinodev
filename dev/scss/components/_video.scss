@@ -1,0 +1,19 @@
+.video-container {
+  /* outline: 1px solid green; */
+  display: grid;
+  grid-column: 640px;
+  grid-row: 273px 273px 273px;
+}
+
+.video-content {
+  /* utline: 1px solid red; */
+  /* flex: 1; */
+  
+  @media screen and (min-width: 768px) {
+    & > iframe {
+      /* border: 1px solid black; */
+      width: 640px;
+      height: 273px;
+    }    
+  }
+}

@@ -1,0 +1,62 @@
+.about-container {
+  background : url(/imgs/about.jpg);
+  clip-path: polygon(0 9%, 100% 0, 100% 91%, 0 100%);
+  padding : 3em 0;
+  position : relative;
+
+  &:before {
+    content: "";
+    width : 100%;
+    height : 100%;
+    top : 0;
+    left : 0;
+    position : absolute;
+    background : #434343;
+    opacity : .5;
+  }
+}
+
+
+.about {
+  position : relative;
+  width : 80%;
+  margin-left : 10%;
+  	@media screen and (min-width: 768px) {
+    display : flex;
+  }
+
+  &__img {
+    display : none;
+    	@media screen and (min-width: 768px) {
+      display : block;
+      &::after {
+        content: "";
+        width : 100%;
+        background : #000;
+        display : block;
+        height : 50px;
+        margin-top : -55px;
+        filter: blur(10px);
+        position : relative;
+        z-index : -1;
+      }
+    }
+  }
+
+  &__description {
+    background : rgba(rgb(49, 56, 51),.9);
+    padding : 1em;
+    color: #fff;
+    /* @include font(small); */
+    font-style: italic;
+
+    	@media screen and (min-width: 768px) {
+      width : 60%;
+      align-self: center;
+      /* @include font(base); */
+      margin-left : -2em;
+      padding : 2em;
+    }
+
+  }
+}
