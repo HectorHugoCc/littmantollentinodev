@@ -1,13 +1,13 @@
 extends templates/template
 
 append config
-  -pageTitle = 'Cris + Janet'
+  -pageTitle = 'Chris + Janet'
   -currentPage = 'prebodas'
 
 block main
-  .title
-    h1: a(href="./bodas.html" name="2")#titleBoda VOLVER
-    .gallery#galeria-bodas
+  .row
+    a(class="btn lg ghost" href="./bodas.html" name="2")#titleBoda Volver a Bodas
+  .gallery#galeria-bodas
 
 block footer
   include blocks/footer

@@ -6,15 +6,16 @@
   //backstretch
   const nrImgBody = 12; //el número de imgs
   const IntSecond = 3; /*los segundos entre las imgs*/
-  
+
   //bodas
   const nrTapaBoda = 7; //numero de bobas
   const nrImgBodas = 20; //el número de imgs por boda
 
   let listRutaImg = new Array(nrImgBodas);
+  let encabBodas = ['Antonio + Amy', 'Chris + Janet', 'Gino + Jazmin', 'Giomar + Bárbara', 'Sean + Susan', 'Omar + Karen', 'Moises + Roxana']; //encabezado de bodas
 
   for (let index = 0; index < nrTapaBoda; index++) {
-   listRutaImg[index] = "./imgs/galeria-bodas/boda"+(index+1)+"/";    
+    listRutaImg[index] = "./imgs/galeria-bodas/boda" + (index + 1) + "/";
   }
 
   //prebodas
@@ -81,73 +82,33 @@
       `;
     }
   }
-
-  //estilos
-
-  let S = document.createElement('style');
-  S.type = 'text/css';
-  S.appendChild(document.createTextNode(`
-  .gallery {
-    display: grid;
-    justify-content: center;
-    grid-template-columns: repeat(1, 300px);
-    grid-template-rows: repeat(${nrImgPreBodas}, 300px);
-  }
-
-  @media screen and (min-width: 768px) {
-    .gallery {
-      grid-template-columns: repeat(2, 300px);
-      grid-template-rows: repeat(${Math.ceil(nrImgPreBodas / 2)}, 300px);
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    .gallery {
-      grid-template-columns: repeat(3, 300px);
-      grid-template-rows: repeat(${Math.ceil(nrImgPreBodas / 3)}, 300px);
-    }
-  }
-
-  @media screen and (min-width: 1440px) {
-    .gallery {
-      grid-template-columns: repeat(4, 300px);
-      grid-template-rows: repeat(${Math.ceil(nrImgPreBodas / 4)}, 300px);
-    }
-  }
-
-  @media screen and (min-width: 2560px) {
-    .gallery {
-      grid-template-columns: repeat(5, 300px);
-      grid-template-rows: repeat(${Math.ceil(nrImgPreBodas / 5)}, 300px);
-    }
-  }
-  `));
-  document.body.appendChild(S);
   /* 
   fin prebodas
   */
 
   /*  
     bodas
-  */ 
+  */
   let bodas = document.getElementById('bodas');
   let galeria_bodas = document.getElementById('galeria-bodas');
   let titleBoda = document.getElementById('titleBoda');
   let currentBoda;
   if (titleBoda) {
-    currentBoda = titleBoda.getAttribute('name');    
+    currentBoda = titleBoda.getAttribute('name');
   }
 
   //tapa bodas
   if (bodas) {
     for (let index = 0; index < nrTapaBoda; index++) {
       bodas.innerHTML += `
-      <a href="boda${index + 1}.html" id="boda-link" name="${index}">
-        <img class="portafolio__img" src="./imgs/tapaboda${index + 1}.jpg" alt="boda${index + 1}">
+      <a href="boda${index + 1}.html" id="boda-link" name="${index}" class="img-link">
+        <figure>
+          <figcaption class="subencabezado">${encabBodas[index]}</figcaption>
+          <img class="portafolio__img" src="./imgs/tapaboda${index + 1}.jpg" alt="${encabBodas[index]}">          
+        </figure>
       </a>
       `;
-      
-    }  
+    }
   }
 
   // Precarga de todas la imagenes
@@ -155,54 +116,63 @@
   if (galeria_bodas) {
     for (let index = 0; index < nrImgBodas; index++) {
       galeria_bodas.innerHTML += `
-      <div class="gallery-item"><a href="${listRutaImg[currentBoda-1]}imageboda${index + 1}.jpg" data-fancybox="gallery" data-caption="boda ${index + 1}"><img src="${listRutaImg[currentBoda-1]}miniboda${index + 1}.jpg" alt="boda ${index + 1}"/></a></div>
+      <div class="gallery-item"><a href="${listRutaImg[currentBoda - 1]}imageboda${index + 1}.jpg" data-fancybox="gallery" data-caption="boda ${index + 1}"><img src="${listRutaImg[currentBoda - 1]}miniboda${index + 1}.jpg" alt="boda ${index + 1}"/></a></div>
       `;
     }
   }
 
-  //estilos
+  /*
+  fin bodas
+  */
+  
+  /*
+  estilos galeria
+  */
+  let S = document.createElement('style');
   S.type = 'text/css';
   S.appendChild(document.createTextNode(`
   .gallery {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(1, 300px);
-    grid-template-rows: repeat(${nrImgBodas}, 300px);
-    grid-gap: 1em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(${Math.ceil(nrImgPreBodas / 3)}, 1fr);
+    
+    grid-row-gap: .2em;
+    grid-column-gap: .4em;
   }
 
   @media screen and (min-width: 768px) {
     .gallery {
-      grid-template-columns: repeat(2, 300px);
-      grid-template-rows: repeat(${Math.ceil(nrImgBodas / 2)}, 300px);
     }
   }
 
   @media screen and (min-width: 1024px) {
     .gallery {
-      grid-template-columns: repeat(3, 300px);
-      grid-template-rows: repeat(${Math.ceil(nrImgBodas / 3)}, 300px);
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(${Math.ceil(nrImgPreBodas / 4)}, 1fr);
     }
   }
 
   @media screen and (min-width: 1440px) {
     .gallery {
-      grid-template-columns: repeat(4, 300px);
-      grid-template-rows: repeat(${Math.ceil(nrImgBodas / 4)}, 300px);
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(${Math.ceil(nrImgPreBodas / 5)}, 1fr); 
     }
   }
 
   @media screen and (min-width: 2560px) {
     .gallery {
-      grid-template-columns: repeat(5, 300px);
-      grid-template-rows: repeat(${Math.ceil(nrImgBodas / 5)}, 300px);
+      grid-template-columns: repeat(5, 1fr);
+      grid-template-rows: repeat(${Math.ceil(nrImgPreBodas / 5)}, 1fr);
     }
   }
   `));
   document.body.appendChild(S);
-  /* 
-    fin bodas
+
+  /*
+   fin estilos galeria
   */
+  
   /*
   MENU
   */

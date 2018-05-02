@@ -1,0 +1,9 @@
+.sistema {
+  text-align: justify;
+
+  &__img {
+    display: block;
+    margin: .5em auto;
+    border: .5em solid #fff;
+  }
+}

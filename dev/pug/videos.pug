@@ -4,16 +4,17 @@ append config
   -pageTitle = 'Videos'
   -currentPage = 'videos'
 
-block main
-  .video-container
-    .video-content
-      iframe(src="https://player.vimeo.com/video/258760149" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
-    .video-content
-      iframe(src="https://player.vimeo.com/video/252647003" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
-    .video-content
-      iframe(src="https://player.vimeo.com/video/253057308" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
-    .video-content
-      iframe(src="https://player.vimeo.com/video/244354974" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen)
+block main  
+  <div class="vimeo-frame"><iframe src="https://player.vimeo.com/video/258760149" style="position:absolute;left:0;top:0;width:100%;height:100%;" frameborder="0" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+  <div class="vimeo-frame"><iframe src="https://player.vimeo.com/video/252647003" style="position:absolute;left:0;top:0;width:100%;height:100%;" frameborder="0" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+  <div class="vimeo-frame"><iframe src="https://player.vimeo.com/video/253057308" style="position:absolute;left:0;top:0;width:100%;height:100%;" frameborder="0" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+  <div class="vimeo-frame"><iframe src="https://player.vimeo.com/video/244354974" style="position:absolute;left:0;top:0;width:100%;height:100%;" frameborder="0" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+block footer
+  include blocks/footer
 
 block assets
   include blocks/scripts

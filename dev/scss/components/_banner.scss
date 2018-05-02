@@ -1,5 +1,6 @@
 .banner {
   background: url(/imgs/banner.jpg) center / cover no-repeat;
+  margin-top: 2em;
   padding-top : 5em;
   padding-bottom : 5em;
   position : relative;
@@ -36,7 +37,7 @@
   }
 
   &__subtitle {
-    background : rgba(#DEDEDE,.9);
+    background : rgba(rgb(15, 15, 15), .5);
     padding : .5em 1em;
     display : table;
     margin-right : auto;

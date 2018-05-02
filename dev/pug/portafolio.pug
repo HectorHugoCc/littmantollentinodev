@@ -8,11 +8,11 @@ block main
   .portafolio
     each file in portafolios
       if file == 'videos'
-        a(href=file+".html")
-          img(src="/imgs/"+file+"img.png", alt=file, class="portafolio__img")
+        a(href=file+".html" class="img-link")
+          img(src="/imgs/"+file+"img.png", alt=file)
       else
-        a(href=file+".html")
-          img(src="/imgs/"+file+"img.jpg", alt=file, class="portafolio__img")
+        a(href=file+".html" class="img-link")
+          img(src="/imgs/"+file+"img.jpg", alt=file)
 
 block footer
   include blocks/footer

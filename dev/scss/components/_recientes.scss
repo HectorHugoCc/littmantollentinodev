@@ -1,0 +1,41 @@
+.rec-gallery {
+  margin-bottom: 2em  ;
+  &__item {
+    margin-top: 2em;
+    
+  }
+
+  &__img {
+    border: .5em solid #fff;
+  }
+}
+
+.oferta-content{
+  margin: .5em .7em;
+  text-align: justify;
+
+  & > h1 {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1em;
+    line-height: 1.2;
+    
+    @media screen and (min-width: 728px) {
+      font-size: 1.5em;      
+    }
+
+    @media screen and (min-width: 1024px) {
+      font-size: 2em;      
+    }
+  }
+
+  & > p {
+    margin: 0 0 1em 0; 
+    &:last-child,
+    &:only-child {
+      margin: 0; 
+    }
+  }
+}
